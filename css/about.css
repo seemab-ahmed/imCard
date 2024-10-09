@@ -1,0 +1,64 @@
+.about-banner {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.597) 0%, rgba(0, 0, 0, 0.597) 100%), url(../images/about-bg.jpeg) no-repeat center;
+    background-size: cover;
+    padding: 200px 0 100px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+.about-banner .banner-left {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+}
+.about-banner .banner-left .banner-detail {
+    text-align: center;
+    max-width: 85%;
+    margin-inline: auto;
+}
+.pg-about {
+    background-color: #fff !important;
+}
+.img-back  {
+    height: 300px;
+}
+.ethics-list {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 0 20px 20px;
+
+}
+.ethics-list li {
+    list-style-type: disc;
+    font-size: 18px;
+    color: #333;
+}
+.team .pre-header{
+    display: block;
+    text-align: center;
+}
+.team .service-img-wrapper {
+    height: 250px;
+}
+.team-card {
+    width: 100%;
+
+}
+@media screen and (max-width:1200px) {
+    .about-banner .banner-left .banner-detail {
+        max-width: 95%;
+    }    
+}
+@media screen and (max-width:992px) {
+    .about-banner .banner-left .banner-detail {
+        max-width: 100%;
+    }    
+    .about-banner {
+        padding: 140px 0 70px;
+        min-height: unset;
+    }
+}

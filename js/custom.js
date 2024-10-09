@@ -57,4 +57,36 @@ $(document).ready(function() {
         }
     });
 });
-
+// aos animation intiallize here 
+// Initialize AOS animations
+AOS.init({
+    duration: 1000,
+    offset: 120, 
+    easing: 'ease-in-out', 
+    once: true, 
+});
+// Get all custom select items
+document.querySelectorAll('.form-select-item').forEach(function(select) {
+    const trigger = select.querySelector('.select-trigger');
+    const options = select.querySelector('.select-options');
+    // Toggle the open class on click
+    trigger.addEventListener('click', function() {
+      select.classList.toggle('open');
+    });
+    // Hide the dropdown if clicked outside
+    document.addEventListener('click', function(e) {
+      if (!select.contains(e.target)) {
+        select.classList.remove('open');
+      }
+    });
+  
+    // Add click event for each option
+    select.querySelectorAll('.custom-option').forEach(function(option) {
+      option.addEventListener('click', function() {
+        select.querySelector('.custom-option.selected').classList.remove('selected');
+        option.classList.add('selected');
+        trigger.textContent = option.textContent;
+        select.classList.remove('open');
+      });
+    });
+  });

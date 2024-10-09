@@ -2,137 +2,184 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>imCard</title>
+    <!-- link fav  -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- fonts Links here  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <!-- link font awsome -->
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- aos library link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- link stylesheet here  -->
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <!-- header starts here  -->
+    <!-- header starts here  --> 
     <header class="header">
         <div class="container">
-            <a class="logo" href="./index.html"><img src="images/im-logo.png" alt="imCard"></a>
+            <a class="logo" href="./index.html"><img src="images/im-logo.png" alt="imCard" /></a>
             <div class="toggle-btn"></div>
             <nav>
                 <ul>
                     <li><a href="./index.html" class="nav-link-item">Home</a></li>
                     <li><a href="./about.html" class="nav-link-item">About</a></li>
-                    <li><a href="#" class="nav-link-item">Services</a></li>
+                    <li><a href="#services" class="nav-link-item">Services</a></li>
                     <li><a href="./contact.html" class="nav-link-item">Contact</a></li>
                 </ul>
+                <div class="btn-wrapper ">
+                    <a href="#" class="primary-btn get-started-btn">Get Started</a>
+                    <!-- <form>
+                        <div class="form-select-wrapper d-mobile">
+                            <div class="form-select-item">
+                                <div class="select-trigger">English</div>
+                                <div class="select-options">
+                                    <span class="custom-option selected" data-value="English">English</span>
+                                    <span class="custom-option" data-value="Spanish">Spanish</span>
+                                </div>
+                            </div>
+                        </div>
+                    </form> -->
+                </div>
             </nav>
-            <a href="#" class="primary-btn">Get Started</a>
+            <div class="btn-wrapper dmb">
+                <a href="#" class="primary-btn">Get Started</a>
+                <form>
+                    <div class="form-select-wrapper">
+                        <div class="form-select-item">
+                            <div class="select-trigger">English</div>
+                            <div class="select-options">
+                                <span class="custom-option selected" data-value="English">English</span>
+                                <span class="custom-option" data-value="Spanish">Spanish</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
         </div>
     </header>
     <!-- Hero section starts here  -->
     <section class="banner">
         <div class="container">
-            <div class="banner-left">
-                <h1>Innovative Solutions for TELCO, Banking, and Government Sectors</h1>
+            <div class="banner-left" data-aos="fade-right" data-aos-delay="600">
+                <h1>
+                    Innovative Solutions for TELCO, Banking, and Government Sectors
+                </h1>
                 <p class="banner-detail">
-                    At imCARD, we provide cutting-edge technology tailored to the telecommunications, banking, and
-                    government sectors. Our solutions help organizations optimize operations, secure systems, and
-                    improve public services, driving efficiency and growth in today's digital world.
+                    At imCARD, we provide cutting-edge technology tailored to the
+                    telecommunications, banking, and government sectors. Our solutions
+                    help organizations optimize operations, secure systems, and improve
+                    public services, driving efficiency and growth in today's digital
+                    world.
                 </p>
                 <a href="#" class="secondry-btn">Explore Our Fleet</a>
+                
             </div>
         </div>
     </section>
     <!-- about section starts here  -->
     <section class="about-row">
         <div class="container">
-            <div class="about-inner">
+            <div class="about-inner" data-aos="fade-right">
                 <div class="about-col-left">
                     <span class="pre-header">About imCARD</span>
                     <h2 class="secondry-heading">Excellence in Technology</h2>
                     <p class="default-text">
-                        At <strong>imCARD</strong>, we empower leading telecommunications, banking, and government
-                        organizations across
-                        Latin America with cutting-edge technology solutions. With a deep understanding of
-                        industry-specific needs—quality, efficiency, and reliability—we position ourselves as not just
-                        suppliers but as key partners invested in your success.
+                        At <strong>imCARD</strong>, we empower leading telecommunications,
+                        banking, and government organizations across Latin America with
+                        cutting-edge technology solutions. With a deep understanding of
+                        industry-specific needs—quality, efficiency, and reliability—we
+                        position ourselves as not just suppliers but as key partners
+                        invested in your success.
                     </p>
                     <a href="#" class="primary-btn">Learn More</a>
                 </div>
-                <div class="about-img-wrapper">
-                    <img src="images/about-img.jpg" alt="about">
+                <div class="about-img-wrapper" data-aos="fade-left" data-aos-delay="800">
+                    <img src="images/about-img.jpg" alt="about" />
                 </div>
             </div>
         </div>
     </section>
     <!-- services section starts here  -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
-            <h2 class="secondry-heading">Our products and services</h2>
-            <p class="default-text">
-                Our services and products are engineered to the highest industry standards. ISO-9000 and ISO 14001
-                certifications back our commitment to quality and environmental responsibility, while our “Carrier
-                grade” devices guarantee superior performance and reliability for mission-critical operations.
+            <h2 class="secondry-heading" data-aos="fade-up">
+                Our products and services
+            </h2>
+            <p class="default-text" data-aos="fade-up">
+                Our services and products are engineered to the highest industry
+                standards. ISO-9000 and ISO 14001 certifications back our commitment
+                to quality and environmental responsibility, while our “Carrier grade”
+                devices guarantee superior performance and reliability for
+                mission-critical operations.
             </p>
-            <div class="service-row">
+            <div class="service-row" data-aos="fade-up">
                 <div class="sercice-card">
                     <div class="service-img-wrapper">
-                        <img src="images/portabilidad.jpg" alt="service">
+                        <img src="images/portabilidad.jpg" alt="service" />
                     </div>
                     <div class="service-card-body">
                         <h4 class="service-title">NUMBER PORTABILITY</h4>
                         <p class="service-para">
-                            Business partner for Latin America of Mediafon Datapro UAB, world leader
-                            in number portability (MNP, FNP), Centralized Device Registration (CEIR), telephone fraud
-                            prevention, Automated User Support (IVR) and database management for the telephone industry.
+                            Business partner for Latin America of Mediafon Datapro UAB,
+                            world leader in number portability (MNP, FNP), Centralized
+                            Device Registration (CEIR), telephone fraud prevention,
+                            Automated User Support (IVR) and database management for the
+                            telephone industry.
                         </p>
                     </div>
                 </div>
                 <div class="sercice-card">
                     <div class="service-img-wrapper">
-                        <img src="images/cable.jpg" alt="cable">
+                        <img src="images/cable.jpg" alt="cable" />
                     </div>
                     <div class="service-card-body">
                         <h4 class="service-title">DTH, CABLE AND INTERNET</h4>
                         <p class="service-para">
-                            We supply devices for Satellite TV, Cable TV and Internet service providers, including:
-                            Antennas, LNBs STB, Multiswitches, cable and related accessories. For ISP: HFC and VDSL
-                            modems, indoor and outdoor antennas and devices for VoWIFI convergence.
+                            We supply devices for Satellite TV, Cable TV and Internet
+                            service providers, including: Antennas, LNBs STB, Multiswitches,
+                            cable and related accessories. For ISP: HFC and VDSL modems,
+                            indoor and outdoor antennas and devices for VoWIFI convergence.
                         </p>
                     </div>
                 </div>
                 <div class="sercice-card">
                     <div class="service-img-wrapper">
-                        <img src="images/sim-card.jpg" alt="card">
+                        <img src="images/sim-card.jpg" alt="card" />
                     </div>
                     <div class="service-card-body">
                         <h4 class="service-title">SMART CARDS</h4>
                         <p class="service-para">
-                            Smart cards for TELCO (SIM cards) and other industries; Secure devices: PKI, HSMs, tokens
-                            and readers or validators; For banking: Debit and credit cards, payment readers; Government:
-                            ID cards and smart passports, electronic wallets for transport payment (MIFARE), tolls and
-                            subsidies, etc.
+                            Smart cards for TELCO (SIM cards) and other industries; Secure
+                            devices: PKI, HSMs, tokens and readers or validators; For
+                            banking: Debit and credit cards, payment readers; Government: ID
+                            cards and smart passports, electronic wallets for transport
+                            payment (MIFARE), tolls and subsidies, etc.
                         </p>
                     </div>
                 </div>
                 <div class="sercice-card">
                     <div class="service-img-wrapper">
-                        <img src="images/it-solutions.jpg" alt="it-solutions">
+                        <img src="images/it-solutions.jpg" alt="it-solutions" />
                     </div>
                     <div class="service-card-body">
                         <h4 class="service-title">IT SOLUTIONS</h4>
                         <p class="service-para">
-                            We integrate HW and SW to create solutions and implement services. We offer managed or
-                            outsourced implementation of turnkey solutions, or provide additional resources for specific
-                            projects. We are experts in databases, big data, information digitalization and information
-                            security.
+                            We integrate HW and SW to create solutions and implement
+                            services. We offer managed or outsourced implementation of
+                            turnkey solutions, or provide additional resources for specific
+                            projects. We are experts in databases, big data, information
+                            digitalization and information security.
                         </p>
                     </div>
                 </div>
@@ -142,15 +189,16 @@
     <!-- quality section starts here  -->
     <section class="quality">
         <div class="container">
-            <div class="quality-top">
+            <div class="quality-top" data-aos="fade-up">
                 <span class="pre-header">Exceeding Industry Benchmarks</span>
                 <h2 class="secondry-heading">Quality You Can Trust</h2>
                 <p class="default-text">
-                    At <strong>imCARD</strong>, we pride ourselves on delivering tailor-made solutions that meet your
-                    organization's
-                    unique requirements for quality, flexibility, and uptime. With 24/7 support, we are here to
-                    ensure seamless operations. Your challenges are our challenges, and we are committed to driving
-                    value through every solution we deliver.
+                    At <strong>imCARD</strong>, we pride ourselves on delivering
+                    tailor-made solutions that meet your organization's unique
+                    requirements for quality, flexibility, and uptime. With 24/7
+                    support, we are here to ensure seamless operations. Your challenges
+                    are our challenges, and we are committed to driving value through
+                    every solution we deliver.
                 </p>
                 <a href="#" class="secondry-btn">Get Started</a>
             </div>
@@ -160,23 +208,24 @@
     <section class="about-row dilivering">
         <div class="container">
             <div class="about-inner">
-                <div class="about-col-left">
+                <div class="about-col-left" data-aos="fade-right">
                     <span class="pre-header">Delivering Industry-Leading Excellence</span>
                     <h2 class="secondry-heading">Unmatched Quality and Standards</h2>
                     <p class="default-text">
-                        Our services and products are engineered to the highest industry standards. ISO-9000 and ISO
-                        14001 certifications back our commitment to quality and environmental responsibility, while our
-                        “Carrier grade” devices guarantee superior performance and reliability for mission-critical
-                        operations.
+                        Our services and products are engineered to the highest industry
+                        standards. ISO-9000 and ISO 14001 certifications back our
+                        commitment to quality and environmental responsibility, while our
+                        “Carrier grade” devices guarantee superior performance and
+                        reliability for mission-critical operations.
                     </p>
                     <a href="#" class="primary-btn">Learn More</a>
                 </div>
                 <div class="delivering-img-col">
-                    <div class="img-front">
-                        <img src="images/quality-imgfront.jpg" alt="about">
+                    <div class="img-front" data-aos="fade-down-left" data-aos-delay="700">
+                        <img src="images/quality-imgfront.jpg" alt="about" />
                     </div>
-                    <div class="img-back">
-                        <img src="images/quality-img-back.jpg" alt="about">
+                    <div class="img-back" data-aos="fade-down-left">
+                        <img src="images/quality-img-back.jpg" alt="about" />
                     </div>
                 </div>
             </div>
@@ -189,42 +238,53 @@
             <h2 class="secondry-heading">Explore Our Work</h2>
             <div class="gallery-row">
                 <div class="gallery-col">
-                    <div class="gallery-card">
-                        <img src="images/gallery-img-1.jpg" alt="gallery-img">
+                    <div class="gallery-card" data-aos="fade-up">
+                        <img src="images/gallery-img-1.jpg" alt="gallery-img" />
                     </div>
-                    <div class="gallery-card">
-                        <img src="images/gallery-img-2.jpg" alt="gallery-img">
-                    </div>
-                </div>
-                <div class="gallery-col">
-                    <div class="gallery-card">
-                        <img src="images/gallery-img-3.jpg" alt="gallery-img">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="images/gallery-img-4.jpg" alt="gallery-img">
+                    <div class="gallery-card" data-aos="fade-up">
+                        <img src="images/gallery-img-2.jpg" alt="gallery-img" />
                     </div>
                 </div>
                 <div class="gallery-col">
-                    <div class="gallery-card">
-                        <img src="images/gallery-img-5.jpg" alt="gallery-img">
+                    <div class="gallery-card" data-aos="fade-up">
+                        <img src="images/gallery-img-3.jpg" alt="gallery-img" />
                     </div>
-                    <div class="gallery-card">
-                        <img src="images/gallery-img-6.jpg" alt="gallery-img">
+                    <div class="gallery-card" data-aos="fade-up">
+                        <img src="images/gallery-img-4.jpg" alt="gallery-img" />
+                    </div>
+                </div>
+                <div class="gallery-col">
+                    <div class="gallery-card" data-aos="fade-up">
+                        <img src="images/gallery-img-5.jpg" alt="gallery-img" />
+                    </div>
+                    <div class="gallery-card" data-aos="fade-up">
+                        <img src="images/gallery-img-6.jpg" alt="gallery-img" />
                     </div>
                 </div>
             </div>
         </div>
-        
     </section>
     <!-- Modal for Lightbox Slider -->
     <div id="lightbox-modal" class="lightbox-modal">
         <div class="gallery-slider">
-            <div class="gallery-slide"><img data-lazy="images/gallery-img-1.jpg" alt="gallery-img"></div>
-            <div class="gallery-slide"><img data-lazy="images/gallery-img-2.jpg" alt="gallery-img"></div>
-            <div class="gallery-slide"><img data-lazy="images/gallery-img-3.jpg" alt="gallery-img"></div>
-            <div class="gallery-slide"><img data-lazy="images/gallery-img-4.jpg" alt="gallery-img"></div>
-            <div class="gallery-slide"><img data-lazy="images/gallery-img-5.jpg" alt="gallery-img"></div>
-            <div class="gallery-slide"><img data-lazy="images/gallery-img-6.jpg" alt="gallery-img"></div>
+            <div class="gallery-slide">
+                <img data-lazy="images/gallery-img-1.jpg" alt="gallery-img" />
+            </div>
+            <div class="gallery-slide">
+                <img data-lazy="images/gallery-img-2.jpg" alt="gallery-img" />
+            </div>
+            <div class="gallery-slide">
+                <img data-lazy="images/gallery-img-3.jpg" alt="gallery-img" />
+            </div>
+            <div class="gallery-slide">
+                <img data-lazy="images/gallery-img-4.jpg" alt="gallery-img" />
+            </div>
+            <div class="gallery-slide">
+                <img data-lazy="images/gallery-img-5.jpg" alt="gallery-img" />
+            </div>
+            <div class="gallery-slide">
+                <img data-lazy="images/gallery-img-6.jpg" alt="gallery-img" />
+            </div>
         </div>
         <span class="close-lightbox">×</span>
     </div>
@@ -232,19 +292,20 @@
     <section class="request-demo">
         <div class="container">
             <div class="request-inner">
-                <div class="request-left">
+                <div class="request-left" data-aos="fade-right">
                     <span class="pre-header">Your Future, Our Technology</span>
                     <h2 class="secondry-heading">Connect with Us Today</h2>
                 </div>
-                <div class="request-right">
+                <div class="request-right" data-aos="fade-left">
                     <p class="default-text">
-                        Partner with imCARD today and unlock next-level technological solutions for your business. Let’s
-                        collaborate to transform your operational capabilities.
+                        Partner with imCARD today and unlock next-level technological
+                        solutions for your business. Let’s collaborate to transform your
+                        operational capabilities.
                     </p>
                     <form class="form-signup" id="request-form" name="request-form" data-name="Requst Form" method="get"
                         aria-label="Request Form">
                         <input class="input-field" name="email" id="email" placeholder="Your Email Address" type="email"
-                            required="">
+                            required="" />
                         <button class="primary-btn">Submit Request</button>
                     </form>
                 </div>
@@ -257,33 +318,40 @@
             <div class="footer-top">
                 <div class="footer-links">
                     <ul class="common-list">
-                        <li><a href="#banner">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">SERVICES</a></li>
-                        <li><a href="#event">PRODUCTS</a></li>
-                        <li><a href="#">QUALITY</a></li>
-                        <li><a href="#footer">CONTACT</a></li>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="footer-icons">
                     <ul class="common-list">
-                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://twitter.com/?lang=en"> <i class="fa-brands fa-twitter"></i></a></li>
+                        <li>
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-globe"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="contact-link">
-                    <a href="tel:(123) 456-7890" class="bottom-info">
-                        <i class="fa-solid fa-phone"></i>(123) 456-7890
+                    <a href="tel:+503 2118-0336" class="bottom-info">
+                        <i class="fa-solid fa-phone"></i>+503 2118-0336
                     </a>
-                    <a href="mailto:mail@boisartmuseum.com" class="bottom-info">
+                    <a href="mailto:info@imcard.com.sv" class="bottom-info">
                         <i class="fa-solid fa-envelope"></i>
-                        mail@boisartmuseum.com
+                        info@imcard.com.sv
                     </a>
                 </div>
-                <span class="bottom-info">All right Reserved || 2024
-                </span>
+                <span class="bottom-info">All right Reserved || 2024 </span>
             </div>
         </div>
     </footer>
@@ -291,8 +359,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <!-- aos script link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/custom.js"></script>
-
 </body>
 
 </html>

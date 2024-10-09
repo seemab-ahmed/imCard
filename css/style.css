@@ -101,6 +101,10 @@ h1 {
     font-size: 16px;
     font-weight: 500;
     padding: 16px 20px;
+    border-radius: 4px;
+}
+.get-started-btn {
+    display: none;
 }
 .input-field::placeholder {
     color: #333;
@@ -168,6 +172,84 @@ nav ul {
     display: none;
     cursor: pointer;
 }
+.btn-wrapper {
+    display: flex; 
+    gap: 10px;
+}
+.form-select-wrapper {
+    position: relative;
+    width: 100px;
+}
+.form-select-wrapper.disabled {
+    opacity: .5;
+}
+  .form-select-item {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .select-trigger {
+    padding: 15px 30px 15px 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #333;
+    font-size: 15px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .select-trigger:hover {
+    border-color: #005ec4;
+  }
+  .select-trigger::after {
+    content: '\f078'; /* Unicode for the Font Awesome chevron-down icon */
+    font-family: 'Font Awesome 5 Free'; /* Specify the font family */
+    font-weight: 900; /* Ensure the icon is solid (font-weight for solid icons) */
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    top: 48%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  .select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* border: 1px solid #dfdfdf; */
+    display: none;
+    z-index: 100;
+  }
+  .custom-option {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    line-height: 1.2;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .custom-option:hover {
+    background-color: #005ec4;
+    color: #fff;
+}
+.custom-option.selected {
+      color: #fff;
+    background-color: #005ec4;
+  }
+  .form-select-item.open .select-options {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+  }
 /* main section starts here  */
 .banner {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.497) 0%, rgba(0, 0, 0, 0.497) 100%), url(../images/bg-img.jpg) no-repeat center;
@@ -176,6 +258,7 @@ nav ul {
     position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 .banner .container {
     display: flex;
@@ -349,6 +432,7 @@ nav ul {
 /* request-demo-section-starts here */
 .request-demo {
     padding: 140px 0;
+    overflow: hidden;
 }
 .request-inner {
     display: grid;
@@ -496,6 +580,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 30px;
     border-bottom: 1px solid#4F4F4F;
 }
@@ -513,8 +598,12 @@ footer {
 .common-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: left;
     width: 100%;
+    gap: 8px;
+}
+.footer-links ul {
+    gap: 25px;
 }
 .footer-links li {
     border-right: 1px solid#F0F1F3;
@@ -526,8 +615,9 @@ footer {
     border: none;
 }
 .footer-icons {
-    width: 90px;
+    width: 185px;
     margin-right: 15px;
+    font-size: 20px;
 }
 .footer-icons a {
     color: #1D1D1D;
@@ -581,7 +671,9 @@ footer {
 
 
 
-
+.d-mobile {
+    display: none;
+}
 
 
 
@@ -642,6 +734,10 @@ footer {
     }
 }
 @media screen and (max-width: 992px) {
+    .select-trigger {
+        padding: 15px ;
+        height: 44px;
+    }
     
     .header .logo {
         max-width: 170px;
@@ -662,7 +758,9 @@ footer {
         padding: 20px 0;
     }
     .header .primary-btn {
-        padding: 15px 20px;
+        padding: 15px 15px;
+        font-size: 13px;
+        display: none;
     }
     .banner-left {
         max-width: 515px;
@@ -676,18 +774,57 @@ footer {
     .about-row {
         padding: 80px 0 80px;
     }
+    .secondry-heading {
+        font-size: 36px;
+    }
     .default-text {
         font-size: 16px;
         margin: 20px 0;
     }
+    .pre-header {
+        font-size: 18px;
+    }
     .about-inner {
         gap: 50px;
+    }
+    .services {
+        padding: 80px 0;
+    }
+    .service-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .quality {
+        padding: 80px 0;
+    }
+    .gallery {
+        padding: 80px 0;
+    }
+    .request-demo button.primary-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .request-demo {
+        padding: 80px 0;
+    }
+    .request-inner {
+        grid-template-columns: 0.8fr 1fr;
+        gap: 36px;
+    }
+    .input-field {
+        font-size: 14px;
+        padding: 15px 20px;
     }
     .footer-top {
         align-items: center;
     }
     .footer-links {
-        max-width: 550px; 
+        max-width: 510px;
+    }
+    .footer-links a {
+        font-size: 14px;
+    }
+    .fotter-links ul {
+        gap: 17px;
     }
     .footer-links li {
         padding-right: 17px;
@@ -696,43 +833,97 @@ footer {
         margin-top: 15px;
     }
     .contact-link {
-        margin-top: 10px;
+        max-width: 50%;
+        width: 100%;
     }
-    
+    .bottom-info {
+        font-size: 14px;
+    }
+    .bottom-info i {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    .footer-icons {
+        width: 165px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
 }
 @media screen and (max-width: 768px) {
+    .btn-wrapper.dmb {
+        display: none;
+    }
+    .btn-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .form-select-wrapper {
+        display: none;
+    }
+    .d-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .header {
+        padding: 15px 0;
+        background: #fff;
+    }
+    .header .logo {
+        max-width: 150px;
+    }
     nav {
         position: fixed;
-        top: 81px;
+        top: 78px;
         right: -100%;
         width: 100%;
-        min-height: 350vh;
-        background: #2b3a67;
+        max-width: unset;
+        height: calc(100vh - 78px);
+        background: #fff;
         text-align: left;
         transition: all 0.5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .header.top nav {
-        top: 64px;
+        top: 68px;
+        height: calc(100vh - 68px);
     }
     nav ul {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        padding: 10px 0;
     }
-    nav ul li a {
-        padding: 10px 20px;
+    nav ul li {
+        width: 100%;
+    }
+    .header ul li .nav-link-item {
+        padding: 15px 30px;
+        font-size: 18px;
+        display: block;
+        width: 100%;
     }
     .header.top ul li .nav-link-item {
+        padding: 15px 30px;
         font-size: 18px;
-        color: #fff;
+        display: block;
+        width: 100%;
+    }
+    .get-started-btn {
+        display: block !important;
+        width: 85%;
+        font-size: 16px;
+        padding: 15px 30px;
+        text-align: center;
+        margin: 0 auto 40px;
     }
     .toggle-btn {
         position: relative;
         width: 31px;
         height: 3px;
-        background: linear-gradient(258deg, #f8e231 0%, #f06735 50%);
+        background: #005ec4;
         flex-shrink: 0;
         display: block;
     }
@@ -742,7 +933,7 @@ footer {
         content: "";
         height: 3px;
         display: block;
-        background: linear-gradient(258deg, #f8e231 0%, #f06735 50%);
+        background: #005ec4;
         left: 0;
         right: 0;
         transition: all 0.3s;
@@ -759,7 +950,7 @@ footer {
     .toggle-open::before,
     .toggle-open::after {
         content: "";
-        background: linear-gradient(258deg, #f8e231 0%, #f06735 50%);
+        background: #005ec4;
         display: block;
         position: absolute;
         top: -4px;
@@ -775,11 +966,82 @@ footer {
         right: 0;
         transition: all 0.5s;
     }    
+    .header .primary-btn {
+        display: none;
+    }
     h1 {
-        font-size: 36px;
+        font-size: 28px;
     }
     .banner {
-        padding: 160px 0 60px;
+        padding: 140px 0 50px;
+    }
+    .banner-detail {
+        font-size: 16px;
+    }
+    .request-demo {
+        padding: 50px 0;
+    }
+    .request-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .input-field {
+        max-width: 55%;
+    }
+    .about-row {
+        padding: 50px 0;
+    }
+    .about-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-img-wrapper {
+        order: 1;
+    }
+    .about-col-left {
+        order: 2;
+    }
+    .about-row .secondry-heading {
+        font-size: 30px;
+    }
+    .primary-btn, .secondry-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+        text-align: center;
+    }
+    .services {
+        padding: 50px 0;
+    }
+    .services .default-text {
+        font-size: 16px;
+    }
+    .service-row {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+    .dilivering .about-inner {
+        grid-template-columns: 1fr;
+    }
+    .delivering-img-col .img-front, .delivering-img-col .img-back {
+        max-height: 250px;
+    }
+    .quality {
+        padding: 50px 0;
+    }
+    .gallery {
+        padding: 50px 0;
+    }
+    .gallery-row {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+    .gallery-card {
+        height: 300px;
+    }
+    .gallery-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     /* footer styles here */
     footer {
@@ -792,17 +1054,20 @@ footer {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
     .footer-links li {
-        padding-bottom: 20px;
+        padding: 0;
         text-align: center;
         border: none;
     }
     .footer-icons {
-        margin: 0 auto;
+        margin: 40px auto 0;
+        width: 190px;
     }
     .footer-bottom {
         flex-direction: column;
+        gap: 10px;
     }
     .footer-bottom a {
         max-width: 100%;
@@ -812,11 +1077,11 @@ footer {
     .bottom-info {
         max-width: 100% ;
         width: 100%;
-        margin-bottom: 15px;
         flex-direction: column;
     }
     .contact-link {
         max-width: 100%;
+        gap: 10px;
     }
     .footer-bottom span {
         font-size: 14px;
